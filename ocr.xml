@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="mi-plugin"
+    id="orc"
     version="1.0.0">
     <name>Cordova Plugin Template</name>
     <description></description>
@@ -30,7 +30,7 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/ocr.js" name="plugin">
+        <js-module src="www/ocr.js" name="ocr">
             <runs/>
             <clobbers target="ocr" />
         </js-module>
