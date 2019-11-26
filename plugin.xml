@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="mi-plugin"
+    version="1.0.0">
+    <name>Cordova Plugin Template</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/ManoloClasques/ocr.git</repo>
+    
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/ocr.js" name="ocr">
+        <runs/>
+
+        <!-- Este es el nombre por el cual se accedera el plugin -->
+        <clobbers target="ocr" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="ocr">
+          <param name="android-package" value="com.example.ocr" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/example/ocr.java" target-dir="src/com/example/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/ocr.js" name="plugin">
+            <runs/>
+            <clobbers target="ocr" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="ocr">
+                <param name="ios-package" value="ocr" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ocr.h" />
+        <source-file src="src/ios/ocr.m" />
+    </platform>
+</plugin>
